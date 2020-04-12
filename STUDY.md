@@ -24,3 +24,10 @@
 vitual DOM을 HTML에 추가/제거한다.
 
 ## 2.0 Creating your first React Component
+
+- Component(`<App />`)는 HTML을 반환하는 함수이다.
+- React는 Component를 가져와서 Broswer가 이해할 수 있는 HTML로 만들어 준다.
+- React application은 한 번에 하나의 component만 rendering 할 수 있다.
+  ```
+  ReactDOM.render(<App />, document.getElementById("root));
+  ```
