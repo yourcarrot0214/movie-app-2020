@@ -31,3 +31,10 @@ vitual DOM을 HTML에 추가/제거한다.
   ```
   ReactDOM.render(<App />, document.getElementById("root));
   ```
+
+## 2.1 Reusable Components with JSX + Props
+
+- component에 정보를 보낼 수 있다.
+- 재사용 가능한 component를 만들 수 있다.
+
+## 2.2 Dynamic Component Generation
