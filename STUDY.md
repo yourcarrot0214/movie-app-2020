@@ -23,6 +23,8 @@
 리액트의 동작 원리에 대해 설명한다.
 vitual DOM을 HTML에 추가/제거한다.
 
+# 2. JSX & Props
+
 ## 2.0 Creating your first React Component
 
 - Component(`<App />`)는 HTML을 반환하는 함수이다.
@@ -38,3 +40,11 @@ vitual DOM을 HTML에 추가/제거한다.
 - 재사용 가능한 component를 만들 수 있다.
 
 ## 2.2 Dynamic Component Generation
+
+# 3. State
+
+# 3.0 Class Components & State
+
+- 동적 데이터와 함께 작업할 때 생성.
+- react는 자동적으로 모든 class component의 render method를 실행한다.
+- class에 있는 state는 객체이고 데이터를 저장하며 그 값을 동적으로 변경할 수 있다.
