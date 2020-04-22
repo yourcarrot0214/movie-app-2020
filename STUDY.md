@@ -90,3 +90,44 @@ vitual DOM을 HTML에 추가/제거한다.
   ```
 - proptypes에 저장된 정보들은 render시 정확한 데이터 타입의 정보가 인수로 활용되었는지를 확인한 후 error 메시지를 console창에 별도로 표시해준다.
 - App.js에서 Movie.js를 import하고, Array.map() 메서드를 활용하여 api 정보들을 매칭시킨 후 render한다.
+
+## 4.2 Styling the Movies
+
+- HTML Tag에 className을 부여하고 `App.css`, `Movie.css` 파일 import
+
+## 4.3 Adding Genres(장르)
+
+- Movie data에 있는 genres 정보를 가져와 `Movie.js`에 render
+
+## 4.4 Styles
+
+- `App.css` 코드 추가
+
+## 4.5 Cutting the summary
+
+- summary 배열의 글자수를 인덱스 기준 180 까지 cut.
+  ```
+  summary.slice(0, 180)
+  ```
+
+# 5. Conclusions
+
+## 5.0 Deploying to Github Pages
+
+- `npm i gh-pages`
+- `package.json` 파일 내에 다음 코드 추가
+  ```
+  "homepage": "https://yourGithubID.github.io/yourGithubRepoName"
+  ```
+  자신의 github ID와 레포지토리 이름을 넣는 것에 유의한다.
+  ```
+  "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "deploy": "gh-pages -d build",
+      "predeploy": "npm run build"
+  }
+  ```
+- 터미널에 `npm run build`를 하면 build 폴더가 생성된다.
+- `deploy`는 build 폴더를 upload 한다.
+- 터미널에 `npm run deploy`를 입력하고 Published 메시지가 출력되면 브라우저에 homepage에 있는 주소값을 입력하여 접속한다.
