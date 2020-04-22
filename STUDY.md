@@ -43,8 +43,14 @@ vitual DOM을 HTML에 추가/제거한다.
 
 # 3. State
 
-# 3.0 Class Components & State
+## 3.0 Class Components & State
 
 - 동적 데이터와 함께 작업할 때 생성.
 - react는 자동적으로 모든 class component의 render method를 실행한다.
 - class에 있는 state는 객체이고 데이터를 저장하며 그 값을 동적으로 변경할 수 있다.
+
+## 3.1 All you need to know about State
+
+- Do not mutate state directily.
+- 직접 state를 변경하지 마시오. => setState를 통한 변경.
+- setState를 호출할 때 마다 react는 새로운 state와 함께 render function을 호출

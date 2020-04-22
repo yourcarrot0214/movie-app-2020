@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 class App extends React.Component {
   state = {
@@ -8,12 +8,12 @@ class App extends React.Component {
 
   add = () => {
     console.log("add");
-    this.state.count += 1;
+    this.setState((current) => ({ count: current.count + 1 }));
   };
 
   minus = () => {
     console.log("minus");
-    this.state.count -= 1;
+    this.setState((current) => ({ count: current.count - 1 }));
   };
 
   render() {
