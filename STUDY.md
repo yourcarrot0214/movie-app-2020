@@ -131,3 +131,75 @@ vitual DOM을 HTML에 추가/제거한다.
 - 터미널에 `npm run build`를 하면 build 폴더가 생성된다.
 - `deploy`는 build 폴더를 upload 한다.
 - 터미널에 `npm run deploy`를 입력하고 Published 메시지가 출력되면 브라우저에 homepage에 있는 주소값을 입력하여 접속한다.
+
+## 5.1 Are we done?
+
+- 배움을 토대로 다른걸 만들어보자.
+- 실전형 react hooks 수강
+- react native로 날씨앱 만들기 수강
+
+# 6. Routing Bonus
+
+## 6.0 Getting Ready for the Router
+
+- react-router dom : 네비게이션을 만들어주는 패키지
+- `src` 폴더 내에 `components`, `routes` 폴더를 생성하여 컴포넌트 파일 관리
+
+## 6.1 Building the Router
+
+- `import { HashRouter, Route } from "react-router-dom";`
+  ```
+  function App() {
+    return (
+      <HashRouter>
+        <Route path="/" exact={true} component={Home}>
+        <Route path="/about" component={About}>
+      </HashRouter>
+    )
+  }
+  ```
+  - `path`값의 주소를 찾아 component를 render
+  - `exact` 값을 true로 설정하여 오직 `path`값과 일치하는 component만을 render
+
+## 6.2 Building the Navigation
+
+- `Navigation.js` 생성
+- `import { Link } from "react-router-dom";`
+
+  ```
+  function Navigation() {
+    return (
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </div>
+    );
+  }
+  ```
+
+- `App.js` 수정
+
+  ```
+  function App() {
+    return (
+      <HashRouter>
+        <Navigation />
+        <Route path="/" exact={true} component={Home}>
+        <Route path="/about" component={About}>
+      </HashRouter>
+    )
+  }
+  ```
+
+- `react-router-dom`의 Link는 `<HashRouter>` 내부에서만 동작한다.
+
+## 6.3 Sharing Props Between Routes
+
+## 6.4 Redirecting
+
+- `<Link to={{ state: { props } }}>`
+- state값을 component에 props로 전달
+
+## 6.5 Conclusions
+
+- `Redux.js`
